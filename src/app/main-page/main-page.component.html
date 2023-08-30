@@ -1,4 +1,5 @@
-<div *ngFor="let p of products">
+<h2>Food available</h2>
+<div *ngFor="let p of products" class="d-flex flex">
   <div class="card cd">
     <img [src]="p.productImg" class="card-img-top" alt="burger">
     <div class="card-body">
@@ -8,5 +9,4 @@
       <a href="#" class="btn btn-primary">{{p.productPrice}}</a>
     </div>
   </div>
-
 </div>
