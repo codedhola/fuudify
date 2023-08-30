@@ -8,6 +8,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { CookieAlertComponent } from './cookie-alert/cookie-alert.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
