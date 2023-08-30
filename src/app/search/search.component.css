@@ -1,0 +1,10 @@
+.search-div {
+  margin: 10px ;
+}
+
+input[type=text] {
+  width: 220px;
+  height: 40px;
+  margin-left: 10px;
+  /* border: none; */
+}

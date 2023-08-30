@@ -1,0 +1,34 @@
+header { 
+  color: grey
+}
+
+/* .card-body-overlay {
+  position: relative;
+  top: -11rem;
+  background: rgba(red, green, blue, alpha);
+}
+
+.card-body-overlay:hover {
+  opacity: 0.69;
+  background: aliceblue;
+} */
+
+.card.cd {
+  position: relative;
+  width: 18rem;
+}
+
+.card.cd > .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: aliceblue;
+  display: none;
+}
+
+.card.cd:hover .card-body {
+  display: block;
+  opacity: 0.89;
+}
