@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class CookieAlertComponent {
 
+
   displayNotification: boolean = false
 
+  closeNotification(event: any){
+    console.log(event.target)
+    this.displayNotification = true
+  }
 }
