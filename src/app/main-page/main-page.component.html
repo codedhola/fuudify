@@ -1,7 +1,12 @@
 <h2>Food available</h2>
 <div *ngFor="let p of products" class="d-flex flex">
   <div class="card cd">
-    <img [src]="p.productImg" class="card-img-top" alt="burger" />
+    <img
+      [src]="p.productImg"
+      class="card-img-top"
+      [ngClass]="{ blur: !p.available }"
+      alt="burger"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ p.productName }}</h5>
       <p class="card-text">
