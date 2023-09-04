@@ -1,4 +1,5 @@
 <div class="search-div">
   <span>Search: </span>
   <input type="text" [(ngModel)]="searchValue">
+  <span *ngIf="searchValue.length > 3">You search for {{searchValue}}</span>
 </div>
