@@ -9,6 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { CookieAlertComponent } from './cookie-alert/cookie-alert.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     TopNavComponent,
     MainPageComponent,
     CookieAlertComponent,
-    SearchComponent
+    SearchComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
