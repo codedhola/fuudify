@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -12,4 +12,16 @@ export class FilterComponent {
   @Input("drinks") pizzaOnly: number = 2;
   @Input("pizza") drinksOnly: number = 0;
   @Input() others: number = 2;
+
+
+  selectedRadioBtn: string = "food"
+
+  @Output()
+  filterChosenFood: EventEmitter<string> = new EventEmitter<string>();
+
+
+  onChosenFood(){
+    this.filterChosenFood.emit(this.selectedRadioBtn)
+    // console.log(this.selectedRadioBtn)
+  }
 }

@@ -5,28 +5,31 @@
   [drinks]="getAllDrinks()"
   [pizza]="getAllPizza()"
   [others]="getAllOthers()"
+  (filterChosenFood)="onFilterChosenFood($event)"
 ></app-filter>
 <h2>Food available</h2>
-<div *ngFor="let p of products" class="d-flex flex">
-  <div class="card cd">
-    <img
-      [src]="p.productImg"
-      class="card-img-top"
-      [ngClass]="{ blur: !p.available }"
-      alt="burger"
-    />
-    <div class="card-body">
-      <h5 class="card-title">{{ p.productName }}</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a *ngIf="p.available; else notifyMe" href="#" class="btn btn-primary">
-        Buy
-      </a>
-      <a href="#" class="btn btn-primary">{{ p.productPrice }}</a>
-      <ng-template #notifyMe>Not in stock</ng-template>
-      <span>{{ p.available }}</span>
+<ng-container *ngFor="let p of products" class="d-flex flex">
+  <div *ngIf="chosenFood === 'all' || chosenFood === p.type">
+    <div class="card cd">
+      <img
+        [src]="p.productImg"
+        class="card-img-top"
+        [ngClass]="{ blur: !p.available }"
+        alt="burger"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ p.productName }}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a *ngIf="p.available; else notifyMe" href="#" class="btn btn-primary">
+          Buy
+        </a>
+        <a href="#" class="btn btn-primary">{{ p.productPrice }}</a>
+        <ng-template #notifyMe>Not in stock</ng-template>
+        <span>{{ p.available }}</span>
+      </div>
     </div>
   </div>
-</div>
+</ng-container>

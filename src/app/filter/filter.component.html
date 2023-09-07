@@ -1,23 +1,53 @@
 <div class="pt-4">
   <span class="mr-4">Select Only: </span>
   <label for="food">
-    <input type="radio" name="food" id="food" />
+    <input
+      type="radio"
+      id="food"
+      value="all"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="onChosenFood()"
+    />
     {{ "All(" + allFood + ") " }}
   </label>
   <label for="food">
-    <input type="radio" name="food" id="food" />
+    <input
+      type="radio"
+      id="food"
+      value="food"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="onChosenFood()"
+    />
     {{ "food(" + foodOnly + ") " }}
   </label>
   <label for="food">
-    <input type="radio" name="pizza" id="pizza" />
+    <input
+      type="radio"
+      id="pizza"
+      value="pizza"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="onChosenFood()"
+    />
     {{ "pizza(" + pizzaOnly + ") " }}
   </label>
   <label for="food">
-    <input type="radio" name="drink" id="food" />
+    <input
+      type="radio"
+      id="food"
+      value="drink"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="onChosenFood()"
+    />
     {{ "Drinks(" + drinksOnly + ") " }}
   </label>
   <label for="food">
-    <input type="radio" name="others" id="others" />
+    <input
+      type="radio"
+      id="others"
+      value="others"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="onChosenFood()"
+    />
     {{ "others(" + others + ") " }}
   </label>
 </div>
