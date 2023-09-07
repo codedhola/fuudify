@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class FilterComponent {
 
-  @Input() all: number = 10;
-  @Input() food: number = 6;
-  @Input() pizza: number = 2;
-  @Input() drinks: number = 0;
+  @Input("all") allFood: number = 10;
+  @Input("food") foodOnly: number = 6;
+  @Input("drinks") pizzaOnly: number = 2;
+  @Input("pizza") drinksOnly: number = 0;
   @Input() others: number = 2;
 }
