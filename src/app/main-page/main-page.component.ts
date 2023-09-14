@@ -80,7 +80,13 @@ export class MainPageComponent {
 
   chosenFood: string = "all"
 
+  searchText: string = ""
+
   onFilterChosenFood(data: string){
     this.chosenFood = data
+  }
+
+  onSearchText(event: string){
+    this.searchText = event
   }
 }

@@ -1,4 +1,4 @@
-<app-search></app-search>
+<app-search (searchedText)="onSearchText($event)"></app-search>
 <app-filter
   [all]="getAll()"
   [food]="getAllFoods()"
@@ -10,7 +10,12 @@
 <h2>Food available</h2>
 <ng-container *ngFor="let p of products" class="d-flex flex">
   <div *ngIf="chosenFood === 'all' || chosenFood === p.type">
-    <div class="card cd">
+    <div
+      class="card cd"
+      *ngIf="
+        searchText === '' || p.productName.toLowerCase().includes(searchText)
+      "
+    >
       <img
         [src]="p.productImg"
         class="card-img-top"
